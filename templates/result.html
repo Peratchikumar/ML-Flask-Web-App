@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📊 Prediction Result</h1>
+
+    {% if prediction == 1 %}
+
+    <div class="success-box">
+
+        <h2>✅ Customer Will Respond</h2>
+
+        <p>
+            Based on the customer information provided, the Machine Learning
+            model predicts that the customer is likely to respond positively
+            to the marketing campaign.
+        </p>
+
+    </div>
+
+    {% else %}
+
+    <div class="failure-box">
+
+        <h2>❌ Customer Will Not Respond</h2>
+
+        <p>
+            Based on the customer information provided, the Machine Learning
+            model predicts that the customer is unlikely to respond to the
+            marketing campaign.
+        </p>
+
+    </div>
+
+    {% endif %}
+
+    {% if probability is not none %}
+
+    <h3>
+
+        Prediction Confidence:
+        <span>{{ probability }}%</span>
+
+    </h3>
+
+    {% endif %}
+
+    <br>
+
+    <a href="{{ url_for('home') }}">
+
+        <button>
+
+            🔄 Predict Another Customer
+
+        </button>
+
+    </a>
+
+</div>
+
+</body>
+
+</html>
