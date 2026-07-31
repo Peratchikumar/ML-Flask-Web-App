@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marketing Campaign Response Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>📈 Marketing Campaign Response Prediction</h1>
+
+        <p>
+            Predict whether a customer is likely to respond to a marketing campaign
+            using a Machine Learning model trained on customer purchasing behaviour.
+        </p>
+
+    </div>
+
+    <div class="form-card">
+
+        <h2>Customer Information</h2>
+
+        <form action="{{ url_for('predict') }}" method="POST">
+
+            <div class="input-group">
+
+                <label for="Income">💰 Annual Income</label>
+
+                <input
+                    type="number"
+                    id="Income"
+                    name="Income"
+                    placeholder="Enter Annual Income"
+                    step="0.01"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="Kidhome">👶 Number of Kids at Home</label>
+
+                <input
+                    type="number"
+                    id="Kidhome"
+                    name="Kidhome"
+                    placeholder="0 - 5"
+                    min="0"
+                    max="5"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="Teenhome">🧑 Number of Teenagers at Home</label>
+
+                <input
+                    type="number"
+                    id="Teenhome"
+                    name="Teenhome"
+                    placeholder="0 - 5"
+                    min="0"
+                    max="5"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="Recency">📅 Days Since Last Purchase</label>
+
+                <input
+                    type="number"
+                    id="Recency"
+                    name="Recency"
+                    placeholder="Enter Number of Days"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="MntWines">🍷 Amount Spent on Wine</label>
+
+                <input
+                    type="number"
+                    id="MntWines"
+                    name="MntWines"
+                    placeholder="Enter Amount"
+                    step="0.01"
+                    required>
+
+            </div>
+
+            <div class="button-group">
+
+                <button type="submit">
+                    🔍 Predict Response
+                </button>
+
+                <button type="reset" class="reset-btn">
+                    🔄 Reset
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="footer">
+
+        <p>
+            Built with ❤️ using Flask, Scikit-learn & Python
+        </p>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

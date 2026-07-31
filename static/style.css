@@ -1,0 +1,420 @@
+/* ===========================================
+   Google Font
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================================
+   Global Styles
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5,#7c3aed);
+
+}
+
+/* ===========================================
+   Main Container
+=========================================== */
+
+.container{
+
+    width:100%;
+    max-width:720px;
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+/* ===========================================
+   Header
+=========================================== */
+
+.header{
+
+    text-align:center;
+    margin-bottom:30px;
+
+}
+
+.header h1{
+
+    color:white;
+    font-size:34px;
+    margin-bottom:12px;
+
+}
+
+.header p{
+
+    color:#f1f5f9;
+    line-height:1.7;
+
+}
+
+/* ===========================================
+   Card
+=========================================== */
+
+.form-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.form-card h2{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:#1e293b;
+
+}
+
+/* ===========================================
+   Form
+=========================================== */
+
+form{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.input-group{
+
+    margin-bottom:18px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#374151;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:2px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    border-color:#2563eb;
+
+    outline:none;
+
+    box-shadow:0 0 8px rgba(37,99,235,.25);
+
+}
+
+/* ===========================================
+   Buttons
+=========================================== */
+
+.button-group{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+button{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button[type="submit"]{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+button[type="submit"]:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.reset-btn{
+
+    background:#64748b;
+
+    color:white;
+
+}
+
+.reset-btn:hover{
+
+    background:#475569;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================================
+   Success Result
+=========================================== */
+
+.success-box{
+
+    background:#dcfce7;
+
+    border-left:8px solid #16a34a;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    margin:20px 0;
+
+}
+
+.success-box h2{
+
+    color:#15803d;
+
+}
+
+.success-box p{
+
+    color:#14532d;
+
+    margin-top:10px;
+
+}
+
+/* ===========================================
+   Failure Result
+=========================================== */
+
+.failure-box{
+
+    background:#fee2e2;
+
+    border-left:8px solid #dc2626;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    margin:20px 0;
+
+}
+
+.failure-box h2{
+
+    color:#b91c1c;
+
+}
+
+.failure-box p{
+
+    color:#7f1d1d;
+
+    margin-top:10px;
+
+}
+
+/* ===========================================
+   Error Page
+=========================================== */
+
+.error-box{
+
+    background:#fff7ed;
+
+    border-left:8px solid #f97316;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.error-box h1{
+
+    color:#c2410c;
+
+}
+
+.error-message{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    background:white;
+
+    border-radius:10px;
+
+    border:1px solid #fed7aa;
+
+    color:#9a3412;
+
+    word-break:break-word;
+
+}
+
+/* ===========================================
+   Prediction Confidence
+=========================================== */
+
+h3{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#1e293b;
+
+}
+
+h3 span{
+
+    color:#2563eb;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+/* ===========================================
+   Links
+=========================================== */
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* ===========================================
+   Footer
+=========================================== */
+
+.footer{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:14px;
+
+}
+
+/* ===========================================
+   Responsive Design
+=========================================== */
+
+@media(max-width:768px){
+
+.container{
+
+    padding:25px;
+
+}
+
+.header h1{
+
+    font-size:28px;
+
+}
+
+.form-card{
+
+    padding:20px;
+
+}
+
+.button-group{
+
+    flex-direction:column;
+
+}
+
+button{
+
+    width:100%;
+
+}
+
+}

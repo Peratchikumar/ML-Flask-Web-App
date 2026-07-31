@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Error</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>⚠️ Oops!</h1>
+
+        <p>
+            Something went wrong while processing your request.
+        </p>
+
+    </div>
+
+    <div class="form-card">
+
+        <div class="error-box">
+
+            <h2>Error Details</h2>
+
+            <div class="error-message">
+
+                {{ error }}
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <a href="/">
+
+            <button type="button">
+
+                ⬅ Back to Home
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

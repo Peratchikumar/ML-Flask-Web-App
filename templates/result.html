@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>🎯 Prediction Result</h1>
+
+        <p>
+            Machine Learning Prediction for Marketing Campaign Response
+        </p>
+
+    </div>
+
+    <div class="form-card">
+
+        {% if prediction == 1 %}
+
+        <div class="success-box">
+
+            <h2>✅ Customer Will Respond</h2>
+
+            <p>
+                This customer is likely to accept the marketing campaign.
+            </p>
+
+        </div>
+
+        {% else %}
+
+        <div class="failure-box">
+
+            <h2>❌ Customer Will Not Respond</h2>
+
+            <p>
+                This customer is unlikely to respond to the marketing campaign.
+            </p>
+
+        </div>
+
+        {% endif %}
+
+        {% if probability %}
+
+        <h3>
+
+            Prediction Confidence
+
+            <br><br>
+
+            <span>{{ probability }}%</span>
+
+        </h3>
+
+        {% endif %}
+
+        <br>
+
+        <a href="/">
+
+            <button type="button">
+
+                🔄 Predict Another Customer
+
+            </button>
+
+        </a>
+
+    </div>
+
+    <div class="footer">
+
+        Built with ❤️ using Flask & Scikit-learn
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
